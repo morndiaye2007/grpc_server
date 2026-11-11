@@ -1,0 +1,23 @@
+  server:
+  port: 8080
+
+spring:
+  application:
+    name: grpc_server
+  datasource:
+    url: jdbc:postgresql://localhost:5432/grpc_product_db
+    username: postgres
+    password: passer
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
+
+grpc:
+  server:
+    port: 9090
